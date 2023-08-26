@@ -13,7 +13,10 @@ for i in range(0, len(mensaje), 1):
         mensajeCifrado += letra
     else:
         ascii = ord(letra)
-        nuevoAscii = ascii + veces
+        baseAscii = ord('a')
+        if mayuscula:
+            baseAscii = ord('A')
+        nuevoAscii = (ascii - baseAscii + veces) % 26 + baseAscii
         nuevaLetra = chr(nuevoAscii)
         mensajeCifrado += nuevaLetra
 

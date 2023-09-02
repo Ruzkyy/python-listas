@@ -16,7 +16,7 @@ for i in range(0, len(mensaje), 1):
         baseAscii = ord('a')
         if mayuscula:
             baseAscii = ord('A')
-        nuevoAscii = (ascii - baseAscii + veces) % 26 + baseAscii
+        nuevoAscii = (ascii - baseAscii - veces) % 26 + baseAscii
         nuevaLetra = chr(nuevoAscii)
         mensajeCifrado += nuevaLetra
 
